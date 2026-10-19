@@ -1,23 +1,26 @@
 package org.firstinspires.ftc.teamcode;
 
-import com.qualcomm.robotcore.hardware.DcMotorSimple;
+import com.bylazar.configurables.annotations.Configurable;
+import com.qualcomm.robotcore.hardware.DcMotorSimple.Direction;
 
+@Configurable
 public class RobotConstants {
-    public static final class HardwareMappings {
-        public static final String FRONT_LEFT = "FrontLeftMotor";
-        public static final String BACK_LEFT = "BackLeftMotor";
+
+    public static double SLO_MO = 0.35;
+    public static double TURN_COEFFICIENT = 0.8;
+    public static double STICK_COUNTER = 0.05;
+
+    public static final class Hardware {
+        public static final String FRONT_LEFT  = "FrontLeftMotor";
+        public static final String BACK_LEFT   = "BackLeftMotor";
         public static final String FRONT_RIGHT = "FrontRightMotor";
-        public static final String BACK_RIGHT = "BackRightMotor";
-        public static DcMotorSimple.Direction LeftFrontDirection = DcMotorSimple.Direction.REVERSE;
+        public static final String BACK_RIGHT  = "BackRightMotor";
 
-        public static DcMotorSimple.Direction RightFrontDirection = DcMotorSimple.Direction.FORWARD;
+        public static final Direction FRONT_LEFT_DIRECTION  = Direction.REVERSE;
+        public static final Direction BACK_LEFT_DIRECTION   = Direction.REVERSE;
+        public static final Direction FRONT_RIGHT_DIRECTION = Direction.FORWARD;
+        public static final Direction BACK_RIGHT_DIRECTION  = Direction.FORWARD;
 
-        public static DcMotorSimple.Direction LeftBackDirection = DcMotorSimple.Direction.REVERSE;
-
-        public static DcMotorSimple.Direction RightBackDirection = DcMotorSimple.Direction.FORWARD;
-        public static String ImuName = "imu";
-
-
-
+        private Hardware() {}
     }
 }
